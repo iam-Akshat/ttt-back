@@ -1,8 +1,10 @@
 const express = require('express')
+const cors = require('cors')
 const { validateRollNums } = require('./helpers/validate')
 const { getResult } = require('./api/getResult')
 const app = express()
 
+app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 
 
